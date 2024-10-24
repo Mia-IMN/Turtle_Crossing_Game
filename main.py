@@ -21,7 +21,7 @@ from cars import Cars
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("#F5F5F7")
-screen.title("Turtle Crossing Game")
+screen.title("Python Turtle Crossing Game")
 
 # cars = Cars()
 screen.tracer(0)
@@ -31,7 +31,7 @@ level = Level()
 cars = Cars()
 
 game_is_on = True
-increment = 1.2
+increment = 0
 while game_is_on:
     time.sleep(0.1)
     screen.update()
@@ -43,10 +43,10 @@ while game_is_on:
         screen.ontimer(level.game_over, 20)
         game_is_on = False
 
-    if timmy.ycor() == 290:
-        increment += 0.2
+    if timmy.ycor() == 300:
+        increment += 1
         screen.ontimer(level.level_up, 20)
-        timmy.goto(x=0, y=-280)
+        timmy.initial_position()
 
     level.current_level()
 

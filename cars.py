@@ -33,7 +33,7 @@ class Cars(Turtle):
     def move_forward(self, distance, increment):
         for car in self.all_cars:
             if car.xcor() > -350:
-                car.forward(INITIAL_MOVE_DISTANCE * increment)
+                car.forward(INITIAL_MOVE_DISTANCE + increment)
                 if car.distance(distance) < 20:
                     return True
 

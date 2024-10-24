@@ -8,16 +8,16 @@ class UserTurtle(Turtle):
         self.shape("turtle")
         self.setheading(90)
         self.penup()
+        self.initial_position()
+
+    def initial_position(self):
         self.goto(x=0, y=-280)
 
     def move_forward(self):
         self.forward(10)
-    #
+
     # def move_left(self):
     #     self.goto(self.xcor() - 20, self.ycor())
     #
     # def move_right(self):
     #     self.goto(self.xcor() + 20, self.ycor())
-    #
-    # def hit_car(self):
-    #     if self.distance(1,1)
